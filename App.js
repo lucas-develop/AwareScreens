@@ -5,16 +5,26 @@ import { StartUpScreen } from './StartUpScreen';
 import { SetupScreen } from './SetupScreen';
 import { DashboardScreen } from './DashboardScreen';
 import { GraphScreen } from './GraphScreen';
+import { ChartTest } from './newGraph';
 
 const RootStack = createStackNavigator(
   {
     Start: StartUpScreen,
     Setup: SetupScreen,
     Dash: DashboardScreen,
-    Graph: GraphScreen
+    Graph: GraphScreen,
   },
   {
     initialRouteName: 'Start',
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: 'rgb(176, 198, 217)',
+      },
+      headerTintColor: 'rgb(0, 51, 160)',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    }
   }
 );
 
